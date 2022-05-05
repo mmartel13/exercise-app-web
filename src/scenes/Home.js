@@ -9,6 +9,7 @@ export default function Home({ exercises }) {
           return (
             <ExerciseCard
               key={exercise.exercise}
+              id={exercise.id}
               name={exercise.exercise}
               image={exercise.image}
               sets={exercise.sets}

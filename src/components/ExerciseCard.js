@@ -5,8 +5,9 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
+import { Link } from 'react-router-dom';
 
-export default function ExerciseCard({name, image, sets, reps, bodyPart}) {
+export default function ExerciseCard({id, name, image, sets, reps, bodyPart}) {
   return (
     <Card sx={{ width: 400 }} key={name}>
       <CardMedia
@@ -30,7 +31,9 @@ export default function ExerciseCard({name, image, sets, reps, bodyPart}) {
         </Typography>
       </CardContent>
       <CardActions>
-        <Button size="small">Details</Button>
+        <Link to={`/exercise-details/${id}`}>
+            <Button size="small">Details</Button>
+          </Link>
       </CardActions>
     </Card>
   );
