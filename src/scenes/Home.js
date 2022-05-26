@@ -3,7 +3,6 @@ import ExerciseCard from '../components/ExerciseCard';
 export default function Home({ exercises }) {
   return (
     <section>
-      <h1>Home</h1>
       <div style={{display: "flex", flexFlow: "row wrap", gap: "30px", justifyContent: "center"}}>
         {exercises.map((exercise) => {
           return (
